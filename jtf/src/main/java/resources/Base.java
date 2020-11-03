@@ -12,18 +12,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Base {
 	
 	public WebDriver driver;
+	public Properties prop;
 	
 	public WebDriver initializeDriver() throws IOException {
 		
-		//String projectPath = System.getProperty("user.dir");
-		Properties prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Aiswa\\eclipse-workspace\\jtf\\src\\main\\java\\resources\\data.properties");
+		String projectPath = System.getProperty("user.dir");
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream(projectPath + "\\src\\main\\java\\resources\\data.properties");
 		
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Aiswa\\Downloads\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", projectPath + "\\src\\main\\java\\resources\\drivers\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver", "D:\\Test Automation\\BrowserDrivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		
