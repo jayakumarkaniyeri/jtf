@@ -2,21 +2,28 @@ package jkjtf;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import jdk.internal.org.jline.utils.Log;
 import pageObjects.POM_LandingPage;
 import pageObjects.POM_LoginPage;
 import resources.Base;
 
 public class HomePage extends Base {
 	
+	public WebDriver driver;
+	public static Logger log = LogManager.getLogger(Base.class.getName());
+	
 	@BeforeTest
 	public void initialize() throws IOException {
 		driver = initializeDriver();
-		
+		log.info("Driver Initiated");
 	}
 	
 	@Test(dataProvider = "getData")
@@ -30,6 +37,7 @@ public class HomePage extends Base {
 		login.getUsername().sendKeys(username);
 		login.getPassword().sendKeys(password);
 		login.clickSubmit().click();
+		log.info("Submit button clicked");
 	}
 	
 	@DataProvider

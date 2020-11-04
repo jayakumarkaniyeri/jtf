@@ -1,0 +1,3 @@
+17:00:56.997 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
+17:01:01.664 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+17:01:03.961 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
