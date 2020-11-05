@@ -22,13 +22,13 @@ public class Base {
 		
 		String projectPath = System.getProperty("user.dir");
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream(projectPath + "\\src\\main\\java\\resources\\data.properties");
+		FileInputStream fis = new FileInputStream(projectPath + "//src//main//java//resources//data.properties");
 		
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", projectPath + "\\src\\main\\java\\resources\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", projectPath + "//src//main//java//resources//drivers//chromedriver");
 			//System.setProperty("webdriver.chrome.driver", "D:\\Test Automation\\BrowserDrivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
