@@ -16,6 +16,15 @@ public class POM_LoginPage {
 	By username = By.id("user_email");
 	By password = By.id("user_password");
 	By btn_login = By.cssSelector("input[name='commit']");
+	By forgot_pwd = By.cssSelector("[href*='password/new']");
+
+	
+	
+	public POM_ForgotPassword forgotPassword() {
+		driver.findElement(forgot_pwd).click();
+		return new POM_ForgotPassword(driver);
+				
+	}
 	
 	
 	public WebElement getUsername() {

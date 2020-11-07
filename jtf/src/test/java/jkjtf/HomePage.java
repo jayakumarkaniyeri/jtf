@@ -11,6 +11,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import jdk.internal.org.jline.utils.Log;
+import pageObjects.POM_ForgotPassword;
 import pageObjects.POM_LandingPage;
 import pageObjects.POM_LoginPage;
 import resources.Base;
@@ -38,6 +39,10 @@ public class HomePage extends Base {
 		login.getPassword().sendKeys(password);
 		login.clickSubmit().click();
 		log.info("Submit button clicked");
+		
+		POM_ForgotPassword fp = login.forgotPassword();
+		fp.enterEmailAdd().sendKeys("xyz");
+		fp.sendMeInstr().click();
 	}
 	
 	@DataProvider
