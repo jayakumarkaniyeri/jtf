@@ -1,0 +1,7 @@
+17:00:56.997 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
+17:01:01.664 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+17:01:03.961 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+19:58:19.220 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
+19:58:22.877 [TestNG-tests-2] INFO  resources.Base - Navigation Bar is displayed
+19:58:24.282 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+19:58:26.419 [TestNG-tests-1] INFO  resources.Base - Submit button clicked

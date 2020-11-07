@@ -30,8 +30,8 @@ public class ValidateNavBar extends Base{
 	public void navigationBar() throws IOException {
 
 		POM_LandingPage lp = new POM_LandingPage(driver);
-		//Assert.assertFalse(lp.getNavigationBar().isDisplayed());
-		Assert.assertTrue(lp.getNavigationBar().isDisplayed());
+		Assert.assertFalse(lp.getNavigationBar().isDisplayed());
+		//Assert.assertTrue(lp.getNavigationBar().isDisplayed());
 		log.info("Navigation Bar is displayed");
 	}
 

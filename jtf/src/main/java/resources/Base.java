@@ -2,7 +2,6 @@ package resources;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -12,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class Base {
 	
@@ -37,8 +37,9 @@ public class Base {
 			//firefox code
 		}
 		
-		else if(browserName.equals("IE")) {
-			//IE Code
+		else if(browserName.equals("safari")) {
+			System.setProperty("webdriver.safari.driver", projectPath + "//src//main//java//resources//drivers//safaridriver");
+			driver = new SafariDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -47,17 +48,17 @@ public class Base {
 		return driver;
 	}
 	
-	public void getScreenShotPath(String testCaseName, WebDriver driver) {
+	public String getScreenShotPath(String testCaseName, WebDriver driver) {
 		
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir") + "\\reports\\"+testCaseName+".png";
+		String destinationFile = System.getProperty("user.dir") + "//reports//"+testCaseName+".png";
 		try {
 			FileUtils.copyFile(source, new File(destinationFile));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return destinationFile;
 		
 	}
 
