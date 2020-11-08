@@ -1,5 +1,8 @@
-20:23:30.333 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
-20:23:32.445 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
-21:44:33.290 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
-21:44:37.765 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
-21:44:39.844 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+20:31:43.678 [main] INFO  resources.Base - Submit button clicked
+20:31:45.956 [main] INFO  resources.Base - Submit button clicked
+20:34:57.332 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
+20:35:01.500 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+20:35:03.465 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+20:35:34.625 [TestNG-tests-1] INFO  resources.Base - Driver Initiated
+20:35:40.107 [TestNG-tests-1] INFO  resources.Base - Submit button clicked
+20:35:42.673 [TestNG-tests-1] INFO  resources.Base - Submit button clicked

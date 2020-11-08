@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="jkjtf.HomePage">
+      <class name="jkjtf.ValidateNavBar">
         <methods>
-          <include name="basePageNavigation"/>
+          <include name="navigationBar"/>
+          <include name="tearDown"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- jkjtf.HomePage -->
+      </class> <!-- jkjtf.ValidateNavBar -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
