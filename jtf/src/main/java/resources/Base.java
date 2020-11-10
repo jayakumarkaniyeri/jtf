@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -29,10 +30,16 @@ public class Base {
 		//String browserName = prop.getProperty("browser");
 		String browserName = System.getProperty("browser");
 		
-		if(browserName.equals("chrome")) {
+		if(browserName.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver", projectPath + "//src//main//java//resources//drivers//chromedriver");
 			//System.setProperty("webdriver.chrome.driver", "D:\\Test Automation\\BrowserDrivers\\chromedriver.exe");
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			if(browserName.contains("headless")) {
+				options.addArguments("headless");
+			}
+			driver = new ChromeDriver(options);
+			
+			
 		}
 		
 		else if(browserName.equals("firefox")) {
